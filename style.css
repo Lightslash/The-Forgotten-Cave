@@ -1,0 +1,135 @@
+@font-face {
+    font-family: 'Dungeon';
+    src: url('font/dungeon.ttf');
+}
+
+body {
+	font-size : 13pt;
+	font-family : "Trebuchet MS", Arial, sans-serif;
+	background-image: url("img/background.jpg"); 
+}
+
+h2 {
+	margin-top : 0px;
+	font-weight : bold;
+}
+
+#fiche{
+	position : absolute;
+	top: 200px;
+	left: 10px;
+	width : 300px;
+	background-color: white;
+	border: 1px solid black;
+}
+
+#fiche div{
+	margin-left: 10px;
+}
+
+#status div {
+	display : block;
+	font-size: 13px;
+}
+#status div+div {
+	border-left : none;
+}
+
+#status .life img{
+	padding-left: 6px;
+}
+
+#status .life progress[value] {
+	-webkit-appearance: none;
+   	appearance: none;
+	width: 150px;
+	height: 12px;
+	margin-bottom: 2px;
+	border: 1px solid black;
+}
+
+#status .life progress[value]::-webkit-progress-bar {
+	background-color: #eee;
+  	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+}
+
+#status .life progress[value]::-webkit-progress-value{
+	background: #93CC57;
+}
+#status .life progress[value]::-moz-progress-bar{
+	background-color: #93CC57;
+  	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+}
+
+#status .mana progress[value] {
+	-webkit-appearance: none;
+   	appearance: none;
+	width: 150px;
+	height: 12px;
+	margin-bottom: 2px;
+	border: 1px solid black;
+}
+
+#status .mana progress[value]::-webkit-progress-bar {
+	background: #eee;
+  	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+}
+
+#status .mana progress[value]::-webkit-progress-value{
+	background: #4ABCEE;
+}
+
+#status .mana progress[value]::-moz-progress-value{
+	background-color: #4ABCEE;
+  	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+}
+
+.section {
+	padding-top: 50px;
+	padding-left: 50px;
+	padding-right: 50px; 
+	margin : auto;
+	margin-top : 10%;
+	width : 45%;
+	min-height: 500px;
+
+	background-image: url("img/parchemin.png");
+	background-repeat: no-repeat;
+	background-size: 100%, 100%;
+	font-size: 30px;
+	font-family: 'Dungeon', Arial, sans-serif;
+}
+.section#intro {
+	display : block;
+}
+.section button {
+	display : block;
+	max-width : 100%;
+	text-decoration : none;
+	margin-right: auto;
+	margin-left: auto;
+	padding : 5px;
+	margin-top : 30px;
+	text-decoration: underline;
+	background-color: transparent;
+	border : none;
+	cursor : pointer;
+	font-family: 'Dungeon', Arial, sans-serif;
+	font-size: 30px;
+}
+
+.section button+button  {
+	margin-top : 10px;
+}
+
+.section h2{
+	text-align: center;
+}
+
+.battle {
+	padding : 10px 10px;
+	margin : 20px 0px;
+	box-shadow : 0px 2px 8px gray;
+}
+
+
