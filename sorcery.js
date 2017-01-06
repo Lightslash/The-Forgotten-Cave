@@ -1,6 +1,8 @@
 $( function() {
 	var buttons = $(".section button");
+	var inputs = $(".section input");
 	var active = $("#intro");
+	var nextSection = "#intro";
 	var life = $("#status .life .value");
 	var mana = $("#status .mana .value");
 	var maxLife = 1000;
@@ -8,27 +10,43 @@ $( function() {
 	
 	startGame();
 
-	function loadEvents(){
-		buttons.click( function() {
-			var nextSection = $(this).attr('go');
-			var addID = "#";
-			active = $(addID.concat(nextSection));
-			var lifeLost = $(this).attr('lifeLost');
-			var loadSectionFromFile = $(this).attr('nextfile');	
+	function firstSection(){
+		$(".section input+button#goNamer").click(function(){
+			var input = $(".section input");
+			if(input.val() == false){
+				$('#fiche #personnage .name h2').text("John Doe");
+			}
+			else
+				$('#fiche #personnage .name h2').text($(".section input").val());
+		});
+	}
 
+	function loadEvents(){
+		buttons = $(".section button");
+		buttons.click( function() {
+			var addID = "#";
+			nextSection = addID.concat($(this).attr('go'));
+			var lifeLost = $(this).attr('lifeLost');
+			var loadSectionFromFile = $(this).attr('nextFile');	
 			// For some browsers, `attr` is undefined; for others,
 			// `attr` is false.  Check for both.
 			if (typeof loadSectionFromFile !== typeof undefined && loadSectionFromFile !== false) {
-				loadNextPart(loadSectionFromFile);
+				loadNextPart(loadSectionFromFile, lifeLost);
 			}
-			gotoSection(active, lifeLost);
+			else if(typeof lifeLost !== undefined && lifeLost !== false){
+				active = $(nextSection);
+				gotoSection(active, lifeLost);
+			}
 		} );
 	}
 	
-	function loadNextPart(loadSectionFromFile){
-		$("#replace").load(loadSectionFromFile);
-		buttons.unbind("click");
-		loadEvents();
+	function loadNextPart(loadSectionFromFile,lifeLost){
+		$("#replace").load(loadSectionFromFile, function(){
+			active = $(nextSection);
+			gotoSection(active, lifeLost);
+			buttons.unbind("click");
+			loadEvents();
+		});
 	}
 	
 	function gotoSection(key, lifeLost) {
@@ -87,8 +105,11 @@ $( function() {
 	}
 
 	function startGame() {
+		//Fonction qui ajoute un event listener sur le premier input
+		firstSection();
 		//Fonction qui démarre le jeu au chargement de la page
 		loadEvents();
+		//$("#fiche").hide();
 		$(".section").hide();
 		active.show();
 		setLife(maxLife);

@@ -5,7 +5,7 @@
 	<script src="sorcery.js"></script>
 	<link type="text/css" rel="stylesheet" href="style.css" />
 	<meta lang="fr" xml:lang="fr" content="text/html;charset=UTF-8" http-equiv="Content-Type">
-	<title>Sword & Sorcery</title>
+	<title>The Forgotten Cave</title>
 </head>
 
 <body>
@@ -22,7 +22,7 @@
 		<div id="personnage">
 			<div class="name"><h2>--</h2></div>
 			<div class="avatar"><img src="img/avatar.jpg" alt="" /></div>
-			<div class="classe"><p>Coucou</p></div>
+			<div class="race" ><span>--</span></div>
 		</div>
 		<div id="status">
 			<div class="life">
@@ -43,89 +43,32 @@
 		<div id="inventaire">
 			<h2>Inventaire</h2>
 		</div>
+		<div id="stats">
+			<h2>Statistiques</h2>
+		</div>
+	</div>
+	<div id="titre">
+		<img src="img/title.png" alt="The Forgotten Cave Title" />
 	</div>
 	<div class="section" id="intro">
-		<h2>Epic dungeon of the evil necromancer</h2>
-		En voila un jeu qu'il est bien.
-
-		<button go="wakeUp" nextFile="story/part1.html">Commencer l'aventure !</button>
-	</div>
-	
-
-	<div class="section" id="wakeUp">
-		Vous ouvez les yeux... Tout est noir autour de vous...
-
-		<button go="cavern">Se relever</button>
-	</div>
-	
-
-	<div class="section" id="cavern">
-		Vous êtes dans une caverne sombre. La seule issue semble être
-		une porte à quelques mètres de là.
-
-		<button go="doorLocked">Sortir</button>
-		<button go="wait">Attendre</button>
-		<button go="examine">Examiner le sol</button>
-	</div>
-	
-
-	<div class="section" id="examine">
-		Rien de plus que des petits cailloux et de la poussière...
 		
-		<button go="doorLocked">Sortir</button>
-		<button go="wait">Attendre</button>
+		<span>Bienvenue dans The Forgotten Cave, un jeu ou TU es le heros. De nombreux choix te seront proposes et chacun influera sur le reste de ton aventure.</span>
+		<br />
+		<span>Mais attention ! De nombreux dangers t'attendent caches dans l'ombre... Bonne chance !</span>
+		<br />
+		<br />
+		<label class="pseudo" for="pseudo">Ecris ton nom </label>
+		<br />
+		<input maxlength="20" minlength="1" class="pseudo" type="text" value="Fredon"/>
+
+		<button id="goNamer" go="wakeUp" nextFile="story/part1.html">Commencer l'aventure !</button>
 	</div>
 	
 
-	<div class="section" id="wait">
-		Vous attendez quelques minutes, mais rien ne se passe...
-		<button go="wait">Continuer à attendre</button>
-		<button go="hitWall">Se taper la tête contre le mur</button>
-		<button go="doorLocked">Sortir</button>
-		<button go="examine">Examiner le sol</button>
-	</div>
-	
 
-	<div class="section" id="hitWall">
-		<p>Aie ! Vous perdez 1 point de vie...</p>
-		<p>Quelque chose tombe du plafond : une clé était cachée dans une
-			faille.</p>
+	<div id="replace">
 			
-			<button go="exit">Utiliser la clé et ouvrir la porte</button>
-		</div>
-		
-		
-		<div class="section" id="doorLocked">
-			Malheureusement, une porte en bois bloque le passage. Elle a l'air vraiment solide&nbsp;:
-			peu probable que vous puissiez la défoncer.
-			<button go="hitDoor" lifeLost="1">Donner un grand coup d'épaule</button>
-			<button go="cavern">Retourner sur vos pas</button>
-		</div>
-		
-		
-		<div class="section" id="hitDoor">
-			BLAM ! La porte n'a pas bougé d'un poil. Par contre, votre épaule, elle, s'est enfoncée de quelques centimètres.
-			Vous perdez 1 point de vie.
-			
-			<button go="hitDoor">Ré-essayer !</button>
-			<button go="cavern">Retourner sur vos pas</button>
-		</div>
-		
-		
-		<div class="section" id="exit">
-			Vous voyez la lumière du jour... Vous avez réussi à vous échapper !
-			<button go="intro">Fin</button>
-		</div>
-		
-		
-		<div class="section" id="death">
-			Vous êtes mort(e) ! C'est balot.
-			<button go="intro">Fin</button>
-		</div>
-
-		<div class="section" id="replace">
-			
-		</div>
+	</div>
 		
 	</body>
 

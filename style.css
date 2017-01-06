@@ -1,11 +1,13 @@
+/**************** Partie globale  ****************/
 @font-face {
     font-family: 'Dungeon';
     src: url('font/dungeon.ttf');
 }
 
 body {
-	font-size : 13pt;
-	font-family : "Trebuchet MS", Arial, sans-serif;
+	font-size : 15pt;
+	font-family : "Dungeon", sans-serif;
+	color: black;
 	background-image: url("img/background.jpg"); 
 }
 
@@ -14,30 +16,66 @@ h2 {
 	font-weight : bold;
 }
 
+/**************** Gère l'image qui sert de titre  ****************/
+#titre{
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	margin-top: 2%;
+}
+
+/**************** Fiche personnage ****************/
 #fiche{
 	position : absolute;
 	top: 200px;
 	left: 10px;
 	width : 300px;
-	background-color: white;
-	border: 1px solid black;
+	height: 450px;
+	font-size: 20pt;
+	background-image: url("img/fiche.png");
+	background-size: 300px, 450px;
+	background-repeat: no-repeat;
+	text-align: center;
 }
 
-#fiche div{
-	margin-left: 10px;
+#fiche h2{
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+/**************** Mise à niveau de la fiche perso pour tous les navigateurs ****************/
+#fiche .avatar{
+	height: 130px;
+}
+
+#fiche .name, #inventaire, #stats{
+	height: 49px;
+}
+
+#fiche #status{
+	height: 85px;
+}
+
+#fiche .race{
+	height: 32px;
+}
+
+#fiche .avatar img{
+	border: 1px solid black;
 }
 
 #status div {
 	display : block;
-	font-size: 13px;
+	font-size: 16px;
 }
 #status div+div {
 	border-left : none;
 }
 
-#status .life img{
+/**************** Barre de vie  ****************/
+#status .life{
 	padding-left: 6px;
-}
+} 
 
 #status .life progress[value] {
 	-webkit-appearance: none;
@@ -61,6 +99,7 @@ h2 {
   	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
 }
 
+/**************** Mana  ****************/
 #status .mana progress[value] {
 	-webkit-appearance: none;
    	appearance: none;
@@ -84,15 +123,20 @@ h2 {
   	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
 }
 
+#inventaire,#stats{
+	text-decoration: underline;
+}
+
+/**************** Partie centrale (contenant l'histoire) ****************/
+
 .section {
 	padding-top: 50px;
 	padding-left: 50px;
 	padding-right: 50px; 
 	margin : auto;
-	margin-top : 10%;
+	margin-top : 4%;
 	width : 45%;
 	min-height: 500px;
-
 	background-image: url("img/parchemin.png");
 	background-repeat: no-repeat;
 	background-size: 100%, 100%;
@@ -101,6 +145,10 @@ h2 {
 }
 .section#intro {
 	display : block;
+}
+
+.section input.pseudo{
+	float: left;
 }
 .section button {
 	display : block;
@@ -120,10 +168,6 @@ h2 {
 
 .section button+button  {
 	margin-top : 10px;
-}
-
-.section h2{
-	text-align: center;
 }
 
 .battle {
