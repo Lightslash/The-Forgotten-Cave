@@ -1,0 +1,41 @@
+Fonctionnalitées majeures:
+
+- Création de la classe personnage dont toutes les classes de personnages hériteront (monstres, héro, peut-être NPC). Constructeur classique avec: PV, Mana, Liste de capacités, statistiques (Intelligence, Force, Agilité, Chance). voir d'autres si d'autres fonctionnalités sont implémentés.
+
+- Création des classes de héros (Humain, Elfe, Nain, ...) et de quelques monstres
+
+- Moteur de combat -> Idée prototype: des combats à la pokemon
+
+- Gestion de l'inventaire
+
+- Création de la classe objet dont tous les items de l'inventaire hériteront
+
+- Réalisation de l'histoire (C.F. script), Première partie -> Une vingtaine de slides comme le prof a demandé, histoire d'avoir une base lors de la date limite
+
+
+Fonctionnalités à  implémenter si on à le temps:
+
+- Système de niveaux
+
+- Cheat codes
+
+- Token pour aller rejoindre une partie de l'histoire (Comme dans les vieux où l'on devait rentrer des codes pour aller à un certain niveau)
+
+- Réalisation d'une histoire avancée, plusieurs chapitres, un boss de fin, etc...
+
+- Refacto du code qui n'est pas très joli:
+	- Séparer le JQuery en différentes classes
+	- Création d'un MVC
+	- Optimiser le code
+
+Fonctionnalités bonus:
+
+- Système de combat avancée:
+	- beaucoup plus de statistiques de personnages
+	- des IAs avancées pour les monstres
+	- plateau de combat
+	- ...
+
+- Histoire poussée au maximum, avec un script du niveau de Donjons et Dragons
+
+- ???
