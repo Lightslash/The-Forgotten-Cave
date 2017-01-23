@@ -38,4 +38,6 @@ Fonctionnalités bonus:
 
 - Histoire poussée au maximum, avec un script du niveau de Donjons et Dragons
 
+- Konami code redirigeant vers thelastgambit.comeleleu.fr
+
 - ???
