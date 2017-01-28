@@ -8,7 +8,9 @@ body {
 	font-size : 15pt;
 	font-family : "Dungeon", sans-serif;
 	color: black;
-	background-image: url("img/background.jpg"); 
+	background-image: url("img/background.jpg");
+	background-repeat: no-repeat;
+	background-size:cover;
 }
 
 h2 {
