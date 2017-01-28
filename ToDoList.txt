@@ -19,7 +19,7 @@ Fonctionnalités à  implémenter si on à le temps:
 
 - Cheat codes
 
-- Token pour aller rejoindre une partie de l'histoire (Comme dans les vieux où l'on devait rentrer des codes pour aller à un certain niveau)
+- Token pour aller rejoindre une partie de l'histoire (Comme dans les vieux jeux où l'on devait rentrer des codes pour aller à un certain niveau)
 
 - Réalisation d'une histoire avancée, plusieurs chapitres, un boss de fin, etc...
 
