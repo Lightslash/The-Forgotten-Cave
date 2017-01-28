@@ -1,79 +1,95 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html>
 <html>
-<head>
-	<script src="jquery.js"></script>
-	<script src="sorcery.js"></script>
-	<!-- Latest compiled and minified CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<link type="text/css" rel="stylesheet" href="style.css" />
-	<meta lang="fr" xml:lang="fr" content="text/html;charset=UTF-8" http-equiv="Content-Type">
-	<title>The Forgotten Cave</title>
-</head>
 
-<body>
-	<div id="menu">
-		<div class="accueil">
+	<head>
+		<script src="jquery.js"></script>
+		<script src="sorcery.js"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link type="text/css" rel="stylesheet" href="style.css" />
+		<meta lang="fr" xml:lang="fr" content="text/html;charset=UTF-8" http-equiv="Content-Type">
+		<title>The Forgotten Cave</title>
+	</head>
 
-		</div>
-		<div class="">
 
-		</div>
-	</div>
-	
-	<!-- <audio src="sfx/cave.wav" loop autoplay>Votre navigateur ne supporte pas le format audio</audio> -->
-	
-	<div id="fiche">
-		<div id="personnage">
-			<div class="name"><h2>--</h2></div>
-			<div class="avatar"><img src="img/avatar.jpg" alt="" /></div>
-			<div class="race" ><span>--</span></div>
-		</div>
-		<div id="status">
-			<div class="life">
-				<img src="img/pv.gif" alt="PV DinoRPG" />
-				<progress value="0" max="100"></progress>
-				<br />
-				<span class="value">--</span>
-				<span class="max">/ 1000</span>
-			</div>
-			<div class="mana">
-				<img src="img/water.gif" alt="Eau Hordes" />
-				<progress value="0" max="100"></progress>
-				<br />
-				<span class="value">--</span>
-				<span class="max">/ 100</span>
+	<body>
+
+		<!-- <audio src="sfx/cave.wav" loop autoplay>Votre navigateur ne supporte pas le format audio</audio> -->
+
+		<div class="conteiner-fluid">
+			<div class="row">
+				<div id="titre" class="text-center">
+					<img src="img/title.png" alt="The Forgotten Cave Title" />
+				</div>
 			</div>
 		</div>
-		<div id="inventaire">
-			<h2>Inventaire</h2>
+
+
+		<div class="container-fluid">
+			<div class="row content">
+
+				<div class="col-md-3 col-sm-12">
+
+					<div id="fiche">
+						<div id="personnage">
+							<div class="name"><h2>--</h2></div>
+							<div class="avatar"><img src="img/avatar.jpg" alt="" /></div>
+							<div class="race" ><span>--</span></div>
+						</div>
+						<div id="status">
+							<div class="life">
+								<img src="img/pv.gif" alt="PV DinoRPG" />
+								<progress value="0" max="100"></progress>
+								<br />
+								<span class="value">--</span>
+								<span class="max">/ 1000</span>
+							</div>
+							<div class="mana">
+								<img src="img/water.gif" alt="Eau Hordes" />
+								<progress value="0" max="100"></progress>
+								<br />
+								<span class="value">--</span>
+								<span class="max">/ 100</span>
+							</div>
+						</div>
+						<div id="inventaire">
+							<h2>Inventaire</h2>
+						</div>
+						<div id="stats">
+							<h2>Statistiques</h2>
+						</div>
+					</div>
+
+				</div>
+
+
+
+				<div class="col-md-9 col-sm-12">
+
+					<div class="section" id="intro">
+						<span>Bienvenue dans The Forgotten Cave, un jeu ou TU es le heros. De nombreux choix te seront proposes et chacun influera sur le reste de ton aventure.</span>
+						<br />
+						<span>Mais attention ! De nombreux dangers t'attendent caches dans l'ombre... Bonne chance !</span>
+						<br />
+						<br />
+						<label class="pseudo" for="pseudo">Ecris ton nom </label>
+						<br />
+						<input maxlength="20" minlength="1" class="pseudo" type="text" value="Fredon"/>
+
+						<button id="goNamer" go="wakeUp" nextFile="story/part1.html">Commencer l'aventure !</button>
+					</div>
+
+					<div id="replace"></div>
+
+				</div>
+
+			</div>
 		</div>
-		<div id="stats">
-			<h2>Statistiques</h2>
-		</div>
-	</div>
-	<div id="titre">
-		<img src="img/title.png" alt="The Forgotten Cave Title" />
-	</div>
-	<div class="section" id="intro">
-		
-		<span>Bienvenue dans The Forgotten Cave, un jeu ou TU es le heros. De nombreux choix te seront proposes et chacun influera sur le reste de ton aventure.</span>
-		<br />
-		<span>Mais attention ! De nombreux dangers t'attendent caches dans l'ombre... Bonne chance !</span>
-		<br />
-		<br />
-		<label class="pseudo" for="pseudo">Ecris ton nom </label>
-		<br />
-		<input maxlength="20" minlength="1" class="pseudo" type="text" value="Fredon"/>
-
-		<button id="goNamer" go="wakeUp" nextFile="story/part1.html">Commencer l'aventure !</button>
-	</div>
-	
 
 
-	<div id="replace">
-			
-	</div>
-		
+
+		<footer class="container-fluid">
+			<p>Footer Text</p>
+		</footer>
+
 	</body>
-
-	</html>
+</html>

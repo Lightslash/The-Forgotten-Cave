@@ -29,8 +29,6 @@ h2 {
 /**************** Fiche personnage ****************/
 #fiche{
 	position : absolute;
-	top: 200px;
-	left: 10px;
 	width : 300px;
 	height: 450px;
 	font-size: 20pt;
@@ -132,12 +130,12 @@ h2 {
 /**************** Partie centrale (contenant l'histoire) ****************/
 
 .section {
-	padding-top: 50px;
-	padding-left: 50px;
-	padding-right: 50px; 
+	padding-top: 40px;
+	padding-left: 40px;
+	padding-right: 40px;
 	margin : auto;
 	margin-top : 4%;
-	width : 45%;
+	/*width : 45%;*/
 	min-height: 500px;
 	background-image: url("img/parchemin.png");
 	background-repeat: no-repeat;
