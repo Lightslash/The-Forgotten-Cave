@@ -48,7 +48,7 @@ h2 {
 	height: 130px;
 }
 
-#fiche .name, #inventaire, #stats{
+#fiche .name, #inventaire{
 	height: 49px;
 }
 
@@ -58,10 +58,6 @@ h2 {
 
 #fiche .race{
 	height: 32px;
-}
-
-#fiche .avatar img{
-	border: 1px solid black;
 }
 
 #status div {
@@ -123,9 +119,10 @@ h2 {
   	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
 }
 
-#inventaire,#stats{
+#inventaire,#key{
 	text-decoration: underline;
 }
+
 
 /**************** Partie centrale (contenant l'histoire) ****************/
 
@@ -135,11 +132,11 @@ h2 {
 	padding-right: 40px;
 	margin : auto;
 	margin-top : 4%;
-	/*width : 45%;*/
-	min-height: 500px;
+	max-width : 1150px;
+	min-height: 660px;
 	background-image: url("img/parchemin.png");
 	background-repeat: no-repeat;
-	background-size: 100%, 100%;
+	background-size: auto;
 	font-size: 30px;
 	font-family: 'Dungeon', Arial, sans-serif;
 }
@@ -147,9 +144,6 @@ h2 {
 	display : block;
 }
 
-.section input.pseudo{
-	float: left;
-}
 .section button {
 	display : block;
 	max-width : 100%;
@@ -168,6 +162,10 @@ h2 {
 
 .section button+button  {
 	margin-top : 10px;
+}
+
+.only-with-key{
+	display: none;
 }
 
 .battle {

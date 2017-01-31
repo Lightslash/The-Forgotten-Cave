@@ -7,6 +7,7 @@ $( function() {
 	var mana = $("#status .mana .value");
 	var maxLife = 1000;
 	var maxMana = 100;
+	var keyAcquired = false;
 	
 	startGame();
 
@@ -18,6 +19,7 @@ $( function() {
 			}
 			else
 				$('#fiche #personnage .name h2').text($(".section input").val());
+			$("#fiche").toggle(500);
 		});
 	}
 
@@ -27,29 +29,36 @@ $( function() {
 			var addID = "#";
 			nextSection = addID.concat($(this).attr('go'));
 			var lifeLost = $(this).attr('lifeLost');
-			var loadSectionFromFile = $(this).attr('nextFile');	
+			var loadSectionFromFile = $(this).attr('nextFile');
+			var getKey = $(this).attr('keyacquired');
 			// For some browsers, `attr` is undefined; for others,
 			// `attr` is false.  Check for both.
+			if(typeof getKey !== typeof undefined && getKey !== false){
+				keyAcquired = true;
+				$("#key").toggle(500);
+				$(".only-with-key").show();
+			}
 			if (typeof loadSectionFromFile !== typeof undefined && loadSectionFromFile !== false) {
 				loadNextPart(loadSectionFromFile, lifeLost);
 			}
-			else if(typeof lifeLost !== undefined && lifeLost !== false){
+			else{
 				active = $(nextSection);
-				gotoSection(active, lifeLost);
+				gotoSection(lifeLost);
 			}
 		} );
 	}
 	
 	function loadNextPart(loadSectionFromFile,lifeLost){
 		$("#replace").load(loadSectionFromFile, function(){
+			$(".only-with-key").hide();
 			active = $(nextSection);
-			gotoSection(active, lifeLost);
+			gotoSection(lifeLost);
 			buttons.unbind("click");
 			loadEvents();
 		});
 	}
 	
-	function gotoSection(key, lifeLost) {
+	function gotoSection(lifeLost) {
 		//Va à a la section donnée par le bouton
 		if (typeof lifeLost !== typeof undefined && lifeLost !== false) {
 			loseLife(lifeLost);
@@ -109,7 +118,8 @@ $( function() {
 		firstSection();
 		//Fonction qui démarre le jeu au chargement de la page
 		loadEvents();
-		//$("#fiche").hide();
+		$("#fiche").hide();
+		$("#key").hide();
 		$(".section").hide();
 		active.show();
 		setLife(maxLife);
