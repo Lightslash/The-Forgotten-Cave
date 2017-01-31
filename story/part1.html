@@ -9,7 +9,7 @@
 	Vos yeux peinent a s'adapter a la penombre qui vous entoure... Tout semble si etrange. Vous venez d'atterir dans un endroit
 	inconnu sans parvenir a vous rappeler comment.<br/>
 	POURQUOI ?<br/>
-	Seul la faible luminositee et l'odeur d'humidite vous permettent de savoir que vous etes dans une grotte.
+	Seul la faible luminosite et l'odeur d'humidite vous permettent de savoir que vous etes dans une grotte.
 	Qui ou quoi vous y a mis ? Que faire ?
 
 	<button go="lookAround">Regarder autour</button>
@@ -18,7 +18,7 @@
 
 
 <div class="section" id="progress">
-	Vous etes encore un peu sonne et le sol peu stable ne vous a pas alerte. En avancant, vous trebuchez et tobez a terre.
+	Vous etes encore un peu sonne et le sol peu stable ne vous a pas alerte. En avancant, vous trebuchez et tombez a terre.
 	Vous feriez mieux a l'avenir d'etre prudent et d'observer ce qui se trame autour de vous !
 
 	<button go="lookAround">Observer les alentours</button>
@@ -31,8 +31,8 @@
 	Des bruits inquietants se font egalement entendre dans cette meme direction.
 
 	<button go="goToTheLight">Continuer vers la lueur</button>
-	<button go="wait">ecouter attentivement</button>
-	<button go="run">Courrir dans l'autre direction</button>
+	<button go="wait">Ecouter attentivement</button>
+	<button go="run">Courir dans l'autre direction</button>
 </div>
 
 
@@ -47,7 +47,7 @@
 
 <div class="section" id="run">
 	Non, ces bruits vous semblent bien reels. Pris par la peur, vous n'avez qu'une idee en tete: FUIR.
-	Vous arriez rapidement devant un embranchement et devez prendre une decision !
+	Vous arrivez rapidement devant un embranchement et devez prendre une decision !
 
 	<button go="goToTheLeft">Aller a gauche</button>
 	<button go="goToTheRight">Aller a droite</button>
@@ -67,22 +67,22 @@
 
 
 <div class="section" id="breakInTheDoor">
-	Le choc est brutal, en voulant enfoncer la porte, vous n'avez reussit qu'a vous blesser. Cette deniere n'a pas bouge
+	Le choc est brutal, en voulant enfoncer la porte, vous n'avez reussi qu'a vous blesser. Cette derniere n'a pas bouge
 	d'un pouce et votre epaule vous fait terriblement mal !
 
 	<button go="breakInTheDoor" lifeLost="400">Enfoncer a nouveau la porte</button>
 	<button go="pushTheDoor">Pousser la porte</button>
-	<button class="only-with-key"go="useTheKey">Utiliser la cle</button>
+	<button class="only-with-key" go="useTheKey">Utiliser la cle</button>
 	<button go="goToTheLight">Retourner vers la lueur</button>
 </div>
 
 
 <div class="section" id="pushTheDoor">
-	La porte est lourne et votre force ne semble pas suffisante pour la faire bouger. Il est fort probable que celle-ci soit
+	La porte est lourde et votre force ne semble pas suffisante pour la faire bouger. Il est fort probable que celle-ci soit
 	verouillee...<br/>
 	Il va falloir trouver une cle pour la deverouiller !
 
-	<button class="only-with-key"go="useTheKey">Utiliser la cle</button>
+	<button class="only-with-key" go="useTheKey">Utiliser la cle</button>
 	<button go="goToTheLight">Retourner vers la lueur</button>
 </div>
 
@@ -113,13 +113,13 @@
 	
 	GAME OVER !!!
 	
-	<button go="intro">Recommencer une partie</button>
+	<button action="end">Recommencer une partie</button>
 </div>
 
 
 <div class="section" id="lookChess">
 	En observant le coffre de plus pres, vous remarquez que ce dernier est place sur une dalle sensible a la pression.
-	Vous decidez alors de prendre le coffre en vous aloignant rapidement de votre position actuelle.<br/>
+	Vous decidez alors de prendre le coffre en vous eloignant rapidement de votre position actuelle.<br/>
 	Par chance vous evitez de peu le piege que vous avez active et un carreau vous frole le visage.
 
 	<button go="openChess2" keyacquired="true">Ouvrir le coffre</button>
@@ -128,8 +128,8 @@
 
 <div class="section" id="openChess2">
 	En securite, vous ouvrez le coffre et apercevez une cle !<br/>
-	Vous la prenez et la mettez dans votre inventaire, elle pourrais bien vous etre utile.
-	Vous permettra t-elle de sortir de cette sombre caverne ?
+	Vous la prenez et la mettez dans votre inventaire, elle pourrait bien vous etre utile.
+	Vous permettra-t-elle de sortir de cette sombre caverne ?
 
 	<button go="followPath">Emprunter le chemin</button>
 </div>
@@ -181,7 +181,7 @@
 	Des bruits inquietants se font egalement entendre dans cette meme direction.
 
 	<button go="goToTheLight">Continuer vers la lueur</button>
-	<button go="wait">ecouter attentivement</button>
+	<button go="wait">Ecouter attentivement</button>
 	<button go="run">Courrir dans l'autre direction</button>
 </div>
 
@@ -232,7 +232,7 @@
 	verouillee...<br/>
 	Il va falloir trouver une cle pour la deverouiller !
 
-	<button class="only-with-key"go="useTheKey">Utiliser la cle</button>
+	<button class="only-with-key" go="useTheKey">Utiliser la cle</button>
 	<button go="goToTheLight">Retourner vers la lueur</button>
 </div>
 
@@ -244,7 +244,7 @@
 	
 	GAME OVER !!!
 	
-	<button go="intro">Recommencer une partie</button>
+	<button action="end">Recommencer une partie</button>
 </div>
 
 
@@ -258,18 +258,18 @@
 
 
 <div class="section" id="openChess">
-	Comme prevu, le coffre n'etais pas verouille mais son ouverture a provoque un piege mortel qui etais pointe sur vous.
+	Comme prevu, le coffre n'etais pas verouille mais son ouverture a provoque un piege mortel qui etait pointe sur vous.
 	Un carreau vous arrive dans le visage ne vous laissant aucune chance...
 	
 	GAME OVER !!!
 	
-	<button go="intro">Recommencer une partie</button>
+	<button action="end">Recommencer une partie</button>
 </div>
 
 
 <div class="section" id="lookChess">
 	En observant le coffre de plus pres, vous remarquez que ce dernier est place sur une dalle sensible a la pression.
-	Vous decidez alors de prendre le coffre en vous aloignant rapidement de votre position actuelle.<br/>
+	Vous decidez alors de prendre le coffre en vous eloignant rapidement de votre position actuelle.<br/>
 	Par chance vous evitez de peu le piege que vous avez active et un carreau vous frole le visage.
 
 	<button go="openChess2">Ouvrir le coffre</button>
@@ -321,15 +321,15 @@
 
 <div class="section" id="useTheKey">
 	La cle que aviez trouve semble correspondre avec la serrure de la porte.<br/>
-	Vous l'enfoncez puis la tourner...<br/>
+	Vous l'enfoncez puis la tournez...<br/>
 	C'est alors que la porte s'ouvre et vous permet ainsi de contempler le soleil au fond du couloir
 
-	<button go="end">Fin</button>
+	<button action="end">Fin</button>
 </div>
 
 
 <div class="section" id="end">
-	Vous avez reussit a sortir de cette grotte !<br/>
+	Vous avez reussi a sortir de cette grotte !<br/>
 	Voulez-vous rejouer ?
 
 	<button action="end">Relancer une partie</button>

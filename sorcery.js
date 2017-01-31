@@ -89,6 +89,7 @@ $( function() {
 
 	function loseLife(lifeLost) {
 		//Enlève "lifeLost" pdv
+		alert("Vous avez perdu " + lifeLost + " PVs.");
 		setLife(getLife() - lifeLost);
 		checkLife();
 	}
