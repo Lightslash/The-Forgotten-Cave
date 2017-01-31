@@ -31,6 +31,7 @@ $( function() {
 			var lifeLost = $(this).attr('lifeLost');
 			var loadSectionFromFile = $(this).attr('nextFile');
 			var getKey = $(this).attr('keyacquired');
+			var getAction = $(this).attr('action');
 			// For some browsers, `attr` is undefined; for others,
 			// `attr` is false.  Check for both.
 			if(typeof getKey !== typeof undefined && getKey !== false){
@@ -41,6 +42,8 @@ $( function() {
 			if (typeof loadSectionFromFile !== typeof undefined && loadSectionFromFile !== false) {
 				loadNextPart(loadSectionFromFile, lifeLost);
 			}
+			else if(typeof getAction !== typeof undefined)
+				endGame();
 			else{
 				active = $(nextSection);
 				gotoSection(lifeLost);
@@ -87,7 +90,12 @@ $( function() {
 	function loseLife(lifeLost) {
 		//Enlève "lifeLost" pdv
 		setLife(getLife() - lifeLost);
+		checkLife();
+	}
 
+	function checkLife(){
+		if(getLife() <= 0)
+			endGame();
 	}
 
 	function setMana(v) {
@@ -130,6 +138,13 @@ $( function() {
 	
 	function endGame() {
 		//...
+		if(getLife() <= 0)
+			alert("Vous êtes mort");
+		else
+			alert("Jeu terminé");
+		buttons.unbind("click");
+		active=$("#intro");
+		startGame();
 	}
 	
 	//konami code
