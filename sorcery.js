@@ -36,8 +36,10 @@ $( function() {
 			// `attr` is false.  Check for both.
 			if(typeof getKey !== typeof undefined && getKey !== false){
 				keyAcquired = true;
-				$("#key").toggle(500);
+				if($("#key").attr('style') == "display: none;")
+					$("#key").toggle(500);
 				$(".only-with-key").show();
+				$(".only-without-key").toggle();
 			}
 			if (typeof loadSectionFromFile !== typeof undefined && loadSectionFromFile !== false) {
 				loadNextPart(loadSectionFromFile, lifeLost);
